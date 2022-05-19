@@ -1,0 +1,195 @@
+@import "~include-media/dist/include-media";
+@import "~open-color/open-color";
+
+// 미디어쿼리
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1024px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $mobile+1) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+// 색상
+$gray-01: #efefef;
+$gray-02: #dfdfdf;
+$gray-03: #404040;
+$black: #121212;
+$mint: #0acad5;
+
+// 폰트
+@import url("https://fonts..com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+.Poppins-Light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.Poppins-Regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.Poppins-Medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.Poppins-SemiBold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.Poppins-Bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.Pretendard-Regular {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+}
+
+.Pretendard-Bold {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 700;
+}
+
+.font-11-10 {
+  @include mobile {
+    font-size: 12px;
+  }
+  @include tablet {
+    font-size: 12px;
+  }
+  @include desktop {
+    font-size: 10px;
+  }
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-32 {
+  font-size: 32px;
+}
+
+// 초기화
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+select {
+  margin: 0;
+  padding: 0;
+}

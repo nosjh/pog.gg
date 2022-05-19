@@ -1,0 +1,49 @@
+@import "./utils.scss";
+
+.container {
+  margin: 0 auto;
+
+  @include mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include tablet {
+    max-width: 1220px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include desktop {
+    max-width: 1220px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.container p {
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.select-league {
+  color: $black;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 36px;
+}
+
+.select-season {
+  color: $black;
+  border: 1px solid $gray-02;
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  width: 150px;
+  height: 32px;
+}
+
+ul {
+  display: flex;
+}

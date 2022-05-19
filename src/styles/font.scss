@@ -1,0 +1,45 @@
+@import url("https://fonts..com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+@import "./utils.scss";
+
+.Poppins-Light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.Poppins-Regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.Poppins-Medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.Poppins-SemiBold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.Poppins-Bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.NanumSquare-Bold {
+  font-family: "NanumSquareBold";
+}
+
+.NanumSquare-Regular {
+  font-family: "NanumSquare";
+}
+
+.font-11-10 {
+  @include mobile {
+    font-size: 11px;
+  }
+  @include desktop {
+    font-size: 10px;
+  }
+}

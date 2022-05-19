@@ -1,0 +1,27 @@
+@import "./utils.scss";
+
+.menu {
+  color: $black;
+  width: 100%;
+  border-bottom: 1px solid $gray-02;
+}
+
+.menu-btn {
+  color: $black;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 20px 0 10px 0;
+  margin-right: 20px;
+}
+
+// .menu-btn:first-child {
+//   padding-left: 0;
+// }
+
+.menu-btn:active {
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 2px solid $mint;
+  font-weight: 700;
+}
