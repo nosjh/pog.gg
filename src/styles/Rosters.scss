@@ -1,0 +1,23 @@
+@import "./utils.scss";
+
+.rosters-container {
+  padding-top: 24px;
+  margin: 0 auto;
+}
+
+.team-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin: 0 auto;
+  width: 360px;
+  appearance: none;
+  border: 1px solid $gray-02;
+  border-radius: 4px;
+  outline: none;
+}
+
+.team-select img {
+  width: 32px;
+}

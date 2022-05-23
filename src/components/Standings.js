@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../styles/Standings.scss";
+import StandingList from "./../components/StandingList/StandingList";
+import * as api from "../lib/api";
 
-function Standings(props) {
+function Standings() {
+  const [standings, setStandings] = useState([]);
+  useEffect(() => {
+    api.Standings().then(function (response) {
+      console.log(response);
+    });
+  }, []);
+
   return (
     <div className="standings-container">
       <div className="info-name Poppins-Regular font-12">
@@ -11,7 +21,7 @@ function Standings(props) {
         <div>SET W-L</div>
         <div>W-L</div>
       </div>
-      <div className="info-team Poppins-Medium font-12">rank</div>
+      <StandingList standings={standings} />
     </div>
   );
 }
