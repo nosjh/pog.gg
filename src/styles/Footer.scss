@@ -1,11 +1,11 @@
 @import "./utils.scss";
 
 footer {
-  padding-top: 20px;
   margin: 0 auto;
   display: flex;
   @include mobile {
     flex-direction: column;
+
     padding-left: 20px;
     padding-right: 20px;
   }

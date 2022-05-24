@@ -15,11 +15,10 @@
   margin-right: 20px;
 }
 
-// .menu-btn:first-child {
-//   padding-left: 0;
-// }
+.menu-btn:first-child {
+}
 
-.menu-btn:active {
+.menu-btn.active {
   padding-left: 0;
   padding-right: 0;
   border-bottom: 2px solid $mint;

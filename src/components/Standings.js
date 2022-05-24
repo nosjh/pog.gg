@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "../styles/Standings.scss";
 import StandingList from "./../components/StandingList/StandingList";
 import * as api from "../lib/api";
@@ -8,7 +7,7 @@ function Standings() {
   const [standings, setStandings] = useState([]);
   useEffect(() => {
     api.Standings().then(function (response) {
-      console.log(response);
+      setStandings(response);
     });
   }, []);
 
@@ -21,7 +20,11 @@ function Standings() {
         <div>SET W-L</div>
         <div>W-L</div>
       </div>
-      <StandingList standings={standings} />
+      <div>
+        {standings.map((standing) => (
+          <StandingList key={standing.teamId} standing={standing} />
+        ))}
+      </div>
     </div>
   );
 }

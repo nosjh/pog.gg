@@ -1,8 +1,42 @@
 .info-team {
+  display: flex;
   width: 100%;
   height: 58px;
   margin-top: 4px;
   border-radius: 4px;
   background: white;
   line-height: 58px;
+}
+
+.info-team img {
+  width: 30px;
+  margin-top: 14px;
+}
+
+.info-team div:nth-child(1) {
+  margin-left: 25px;
+}
+
+.info-team div:nth-child(2) {
+  margin-left: 22px;
+}
+
+.info-team div:nth-child(3) {
+  margin-left: 10px;
+}
+
+.info-team div:nth-child(4) {
+  margin-left: auto;
+  width: 70px;
+  text-align: center;
+}
+
+.info-team div:nth-child(5) {
+  width: 70px;
+  text-align: center;
+}
+
+.info-team div:nth-child(6) {
+  width: 70px;
+  text-align: center;
 }

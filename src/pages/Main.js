@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import $ from "jquery";
 import "../styles/Main.scss";
 import "../styles/tab-menu.scss";
 import Header from "../components/Header";
@@ -24,13 +25,19 @@ const content = [
 
 const useTabs = (initialTabs, allTabs) => {
   const [contentIndex, setContentIndex] = useState(initialTabs);
+  useEffect(() => {
+    $("button").click(function () {
+      $("button").removeClass("active");
+      $(this).addClass("active");
+    });
+  });
   return {
     contentItem: allTabs[contentIndex],
     contentChange: setContentIndex,
   };
 };
 
-export default function Main() {
+function Main() {
   const { contentItem, contentChange } = useTabs(0, content);
   return (
     <div>
@@ -52,7 +59,12 @@ export default function Main() {
         <div className="menu">
           {content.map((section, index) => (
             <button
-              className="menu-btn Pretendard-Regular font-14"
+              key={index}
+              className={
+                index == 0
+                  ? "menu-btn Pretendard-Regular font-14 active"
+                  : "menu-btn Pretendard-Regular font-14"
+              }
               onClick={() => contentChange(index)}
             >
               {section.tab}
@@ -65,3 +77,5 @@ export default function Main() {
     </div>
   );
 }
+
+export default Main;
