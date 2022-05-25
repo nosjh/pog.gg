@@ -5,6 +5,10 @@
   margin-top: 24px;
 }
 
+.info-schedule:nth-child(2n) {
+  margin-top: 0px;
+}
+
 .info-match {
   display: flex;
   justify-content: center;

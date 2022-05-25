@@ -3,7 +3,7 @@ import "../styles/Footer.scss";
 
 function Footer() {
   return (
-    <footer>
+    <div className="footer">
       <img
         className="footer-logo"
         src={process.env.PUBLIC_URL + "/img/logo_pog.svg"}
@@ -15,7 +15,7 @@ function Footer() {
         trademarks or registered trademarks of Riot Games, Inc. League of
         Legends © Riot Games, Inc.
       </p>
-    </footer>
+    </div>
   );
 }
 

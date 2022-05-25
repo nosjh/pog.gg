@@ -4,11 +4,11 @@ import "../../styles/ScheduleList.scss";
 function ScheduleList({ schedule }) {
   const { Day, TeamAKey, TeamBKey, TeamAScore, TeamBScore } = schedule;
 
-  const Date = schedule.map((index) => {
-    if (index % 2 == 0) {
-      return Day;
-    }
-  });
+  //   const Date = Day.map((day, index) => {
+  //     if (index % 2 == 0) {
+  //       return day;
+  //     }
+  //   });
 
   //   const ScoreA = TeamAScore.map((n) => {
   //     if (n === 3) {
@@ -28,7 +28,7 @@ function ScheduleList({ schedule }) {
 
   return (
     <div className="info-schedule">
-      <div className="date Pretendard-Regular font-14">{Date}</div>
+      <div className="date Pretendard-Regular font-14">{Day}</div>
       <div className="info-match Poppins-Medium font-14">
         <div className="teamA">
           <div className="NameA">{TeamAKey}</div>
