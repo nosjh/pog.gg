@@ -1,0 +1,83 @@
+@import "./utils.scss";
+
+.info-schedule {
+  color: $black;
+  margin-top: 24px;
+}
+
+.info-match {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 58px;
+  margin-top: 4px;
+  border-radius: 4px;
+  background: white;
+  line-height: 58px;
+}
+
+.teamA {
+  display: flex;
+}
+
+.teamB {
+  display: flex;
+}
+
+.score {
+  display: flex;
+  text-align: center;
+}
+
+.vs {
+  //   margin: 0;
+  width: 14px;
+  text-align: center;
+}
+
+.info-match img {
+  width: 32px;
+  margin-top: 13px;
+}
+
+.logoA {
+  padding-right: 12px;
+}
+
+.logoB {
+  padding-left: 12px;
+}
+
+.NameA {
+  padding-right: 12px;
+}
+
+.NameB {
+  padding-left: 12px;
+}
+
+.scoreA {
+  width: 32px;
+  height: 32px;
+  margin-top: 13px;
+  margin-right: 8px;
+  border-radius: 4px;
+  background-color: $gray-01;
+  line-height: 32px;
+  text-align: center;
+}
+
+.scoreB {
+  width: 32px;
+  height: 32px;
+  margin-top: 13px;
+  margin-left: 8px;
+  border-radius: 4px;
+  background-color: $gray-01;
+  line-height: 32px;
+  text-align: center;
+}
+
+.date:nth-child(2n) {
+  display: none;
+}

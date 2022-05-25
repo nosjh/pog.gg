@@ -1,12 +1,11 @@
 import React from "react";
 import "../styles/Rosters.scss";
-import drx from "../img/team_logo/100000230.png";
 
 function Rosters() {
   return (
     <div className="rosters-container">
       <button className="team-select">
-        <img src={drx} />
+        <img src={process.env.PUBLIC_URL + "/img/team_logo/100000230.png"} />
         <p>DRX</p>
         <ul>
           <li></li>

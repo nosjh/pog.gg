@@ -10,6 +10,7 @@
     "classnames": "^2.3.1",
     "include-media": "^1.4.10",
     "jquery": "^3.6.0",
+    "moment": "^2.29.3",
     "open-color": "^1.9.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

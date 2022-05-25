@@ -3,6 +3,7 @@
 footer {
   margin: 0 auto;
   display: flex;
+  color: $black;
   @include mobile {
     flex-direction: column;
 

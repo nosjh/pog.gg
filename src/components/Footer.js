@@ -1,11 +1,13 @@
 import React from "react";
 import "../styles/Footer.scss";
-import logo from "../img/logo_pog.svg";
 
 function Footer() {
   return (
     <footer>
-      <img className="footer-logo" src={logo} />
+      <img
+        className="footer-logo"
+        src={process.env.PUBLIC_URL + "/img/logo_pog.svg"}
+      />
       <p className="Poppins-Light font-11-10">
         POG.GG isn’t endorsed by Riot Games and doesn’t reflect the views or
         opinions of Riot Games or anyone officially involved in producing or
