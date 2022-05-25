@@ -18,10 +18,13 @@
 
 .teamA {
   display: flex;
+  justify-content: flex-end;
+  width: 160px;
 }
 
 .teamB {
   display: flex;
+  width: 160px;
 }
 
 .score {

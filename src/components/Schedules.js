@@ -15,7 +15,7 @@ function Schedules() {
     <div className="schedul-container">
       <div>
         {schedules.map((schedule) => (
-          <ScheduleList key={schedule.Day} schedule={schedule} />
+          <ScheduleList key={schedule.RoundId} schedule={schedule} />
         ))}
       </div>
     </div>

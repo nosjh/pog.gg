@@ -1,13 +1,34 @@
 import React from "react";
 import "../../styles/ScheduleList.scss";
-// import moment from "moment";
 
 function ScheduleList({ schedule }) {
-  //   const Date = moment({ Day }).format("YYYY년 MM월 DD일");
   const { Day, TeamAKey, TeamBKey, TeamAScore, TeamBScore } = schedule;
+
+  const Date = schedule.map((index) => {
+    if (index % 2 == 0) {
+      return Day;
+    }
+  });
+
+  //   const ScoreA = TeamAScore.map((n) => {
+  //     if (n === 3) {
+  //       return n - 1;
+  //     } else {
+  //       return n;
+  //     }
+  //   });
+
+  //   const ScoreB = TeamBScore.map((n) => {
+  //     if (n === 3) {
+  //       return n - 1;
+  //     } else {
+  //       return n;
+  //     }
+  //   });
+
   return (
     <div className="info-schedule">
-      <div className="date Pretendard-Regular font-14">{Day}</div>
+      <div className="date Pretendard-Regular font-14">{Date}</div>
       <div className="info-match Poppins-Medium font-14">
         <div className="teamA">
           <div className="NameA">{TeamAKey}</div>
