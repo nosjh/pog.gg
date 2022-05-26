@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import '../styles/Rosters.scss';
 // import RosterList from './rosters/RosterList';
@@ -35,21 +36,75 @@ function Rosters() {
           <li>
             <div class="option">
               <img src={`img/lck.svg`} />
-              <span>SELECT TEAM</span>
+              <div>SELECT TEAM</div>
+              <br/>
             </div>
           </li>
         </ul>
         <ul class="select_ul">
           <li>
-            <div class="option li01">
-              <div class="icon"></div>
+            <div class="option">
+              <img src={`img/team_logo/T1.png`} />
               <div>T1</div>
             </div>
           </li>
           <li>
-            <div class="option li02">
-              <div class="icon"></div>
+            <div class="option">
+            <img src={`img/team_logo/GEN.png`} />
               <div>Gen.G</div>
+            </div>
+          </li>
+          <li>
+            <div class="option">
+            <img src={`img/team_logo/DK.png`} />
+              <div>DWG KIA</div>
+            </div>
+          </li>
+          <li>
+            <div class="option">
+            <img src={`img/team_logo/KDF.png`} />
+              <div>Kwangdong Freecs</div>
+            </div>
+          </li>
+          <li>
+            <div class="option">
+            <img src={`img/team_logo/GEN.png`} />
+              <div>Gen.G</div>
+            </div>
+          </li>
+          <li>
+            <div class="option">
+            <img src={`img/team_logo/DRX.png`} />
+              <div>DRX</div>
+            </div>
+          </li> <li>
+            <div class="option">
+            <img src={`img/team_logo/BRO.png`} />
+              <div>Fredit BRION</div>
+            </div>
+          </li>
+          <li>
+            <div class="option">
+            <img src={`img/team_logo/KT.png`} />
+              <div>kt Rolster</div>
+            </div>
+          </li>
+          <li>
+            <div class="option">
+            <img src={`img/team_logo/NS.png`} />
+              <div>NongShim REDFORCE</div>
+            </div>
+          </li>
+          <li>
+            <div class="option">
+            <img src={`img/team_logo/LSB.png`} />
+              <div>Liiv SANDBOX</div>
+            </div>
+          </li>
+          <li>
+            <div class="option">
+            <img src={`img/team_logo/HLE.png`} />
+              <div>Hanwha Life Esports</div>
             </div>
           </li>
         </ul>
