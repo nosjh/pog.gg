@@ -1,4 +1,4 @@
-@import "./utils.scss";
+@import './utils.scss';
 
 .info-schedule {
   color: $black;
@@ -83,8 +83,4 @@
   background-color: $gray-01;
   line-height: 32px;
   text-align: center;
-}
-
-.date:nth-child(2n) {
-  display: none;
 }

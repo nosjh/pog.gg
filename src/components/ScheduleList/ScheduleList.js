@@ -4,11 +4,15 @@ import "../../styles/ScheduleList.scss";
 function ScheduleList({ schedule }) {
   const { Day, TeamAKey, TeamBKey, TeamAScore, TeamBScore } = schedule;
 
-  const matchDay = Day();
-  const year = matchDay.getFullYear();
-  const month = ("0" + (matchDay.getMonth() + 1)).slice(-2);
-  const day = ("0" + matchDay.getDate()).slice(-2);
-  const dateString = year + "년 " + month + "월 " + day + "일";
+  const setDay = (dayVal) => {
+    const matchDay = new Date(dayVal);
+    const year = matchDay.getFullYear();
+    const month = matchDay.getMonth() + 1;
+    const day = matchDay.getDate();
+    const dateString = year + "년 " + month + "월 " + day + "일";
+
+    return dateString;
+  };
 
   //   const ScoreA = TeamAScore.map((n) => {
   //     if (n === 3) {
@@ -28,7 +32,9 @@ function ScheduleList({ schedule }) {
 
   return (
     <div className="info-schedule">
-      <div className="date Pretendard-Regular font-14">{dateString}</div>
+      <div className="date Pretendard-Regular font-14">
+        {Day && setDay(Day)}
+      </div>
       <div className="info-match Poppins-Medium font-14">
         <div className="teamA">
           <div className="NameA">{TeamAKey}</div>
