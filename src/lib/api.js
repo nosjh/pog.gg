@@ -15,7 +15,7 @@ export const Schedules = async () => {
   } catch (e) {}
 };
 
-export const Rosters = async () => {
+export const RostersT1 = async () => {
   try {
     const response = await axiosInstance.get('/v3/lol/scores/json/PlayersByTeam/100000231');
     return response.data;

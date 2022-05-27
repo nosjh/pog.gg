@@ -1,4 +1,4 @@
-@import "./utils.scss";
+@import './utils.scss';
 
 .container {
   margin: 0 auto;
@@ -21,7 +21,7 @@
   }
 }
 
-.container p {
+.container > p {
   margin-top: 10px;
   margin-bottom: 14px;
 }
@@ -32,16 +32,39 @@
   border: none;
   outline: none;
   height: 36px;
+  width: 70px;
+  appearance: none;
 }
 
 .select-season {
+  padding-left: 8px;
   color: $black;
-  border: 1px solid $gray-02;
-  border-radius: 4px;
+  border: none;
   background-color: transparent;
   outline: none;
-  width: 150px;
+  appearance: none;
+  width: 126px;
   height: 32px;
+}
+
+.select-season-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  border: 1px solid $gray-02;
+  border-radius: 4px;
+}
+
+.select-season-icon {
+  margin-top: 6px;
+}
+
+.select-league-wrap {
+  display: flex;
+}
+
+.select-league-icon {
+  margin-top: 15px;
 }
 
 ul {
