@@ -1,31 +1,69 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import $ from 'jquery';
-import '../styles/Rosters.scss';
-import RosterT1Container from '../containers/RosterT1Container';
-// import RosterList from './rosters/RosterList';
-// import Rosters_t1 from './rosters/Rosters_t1';
+import { useEffect, useState } from "react";
+import { Menu, Dropdown, Space } from "antd";
+import { DownOutlined, SmileOutlined } from "@ant-design/icons";
+import "../styles/Rosters.scss";
+import RosterT1Container from "../containers/RosterT1Container";
+
+const teams = [
+  {
+    Key: "T1",
+    TeamId: "100000231",
+  },
+  {
+    Key: "GEN",
+    TeamId: "100000064",
+  },
+  {
+    Key: "DK",
+    TeamId: "100000154",
+  },
+  {
+    Key: "KDF",
+    TeamId: "100000001",
+  },
+  {
+    Key: "DRX",
+    TeamId: "100000230",
+  },
+  {
+    Key: "BRO",
+    TeamId: "100000435",
+  },
+  {
+    Key: "KT",
+    TeamId: "100000005",
+  },
+  {
+    Key: "NS",
+    TeamId: "100000436",
+  },
+  {
+    Key: "LSB",
+    TeamId: "100000155",
+  },
+  {
+    Key: "HLE",
+    TeamId: "100000066",
+  },
+];
 
 function Rosters() {
+  const [teamId, setTeamId] = useState("100000231");
+  const [style, setStyle] = useState("optionList");
+
   // 선택버튼
-  const [teamId, setTeamId] = useState('100000231');
-  useEffect(() => {
-    $('.default_option').click(function () {
-      $(this).parent().toggleClass('active');
-    });
+  // const label = document.querySelector(".label");
+  // const options = document.querySelectorAll(".optionItem");
+  // const handleSelect = function (item) {
+  //   label.innerHTML = item.textContent;
+  //   label.parentNode.classList.remove("active");
+  // };
 
-    $('.select_ul li').click(function () {
-      var currentele = $(this).html();
-      $('.default_option li').html(currentele);
-      $(this).parents('.select_wrap').removeClass('active');
-    });
-
-    $('.option').click(function () {
-      // console.log($(this).attr('id').val());
-      // $('.rosters').hide();
-      // $('#' + $(this).val()).show();
-    });
-  });
+  // options.forEach(function (option) {
+  //   option.addEventListener("click", function () {
+  //     handleSelect(option);
+  //   });
+  // });
 
   const handleClick = (id) => {
     // console.log('test');
@@ -33,158 +71,51 @@ function Rosters() {
     setTeamId(id);
   };
 
+  const changeStyle = () => {
+    setStyle("optionListShow");
+  };
+
+  // label.addEventListener("click", function () {
+  //   if (label.parentNode.classList.contains("active")) {
+  //     label.parentNode.classList.remove("active");
+  //   } else {
+  //     label.parentNode.classList.add("active");
+  //   }
+  // });
+
   return (
     <div className="rosters-container">
       {/* 선택버튼 */}
-      <div className="select_wrap Poppins-Medium font-12" id="team-selector">
-        <ul className="default_option">
-          <li>
-            <div className="option">
-              <img src={`img/lck.svg`} />
-              <div>SELECT TEAM</div>
-            </div>
+      <div className="selectBox Poppins-Medium font-12">
+        <button className="label" onClick={changeStyle}>
+          <img src={`img/lck.svg`} />
+          SELECT TEAM
+        </button>
+        <ul className={style}>
+          {teams.map((team) => (
+            <li className="optionItem" key={team.Key}>
+              <img src={`img/team_logo/${team.TeamId}.png`} />
+              {team.Key}
+            </li>
+          ))}
+          {/* <li
+            className="optionItem"
+            onClick={() => {
+              handleClick("100000064");
+            }}
+          >
+            <img src={`img/team_logo/T1.png`} />
+            T1
           </li>
-        </ul>
-        <ul className="select_ul">
-          <li>
-            {/* <div value="t1" id="100000231" className="option"> */}
-            <div
-              value="t1"
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000231');
-              // }}
-            >
-              <img src={`img/team_logo/T1.png`} />
-              <div>T1</div>
-            </div>
-          </li>
-          <li>
-            {/* <div id="100000064" className="option"> */}
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000064');
-              // }}
-            >
-              <img src={`img/team_logo/GEN.png`} />
-              <div>Gen.G</div>
-            </div>
-          </li>
-          <li>
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000154');
-              // }}
-            >
-              {/* <div id="100000154" className="option"> */}
-              <img src={`img/team_logo/DK.png`} />
-              <div>DWG KIA</div>
-            </div>
-          </li>
-          <li>
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000001');
-              // }}
-            >
-              {/* <div id="100000001" className="option"> */}
-              <img src={`img/team_logo/KDF.png`} />
-              <div>Kwangdong Freecs</div>
-            </div>
-          </li>
-          <li>
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000064');
-              // }}
-            >
-              {/* <div id="100000064" className="option"> */}
-              <img src={`img/team_logo/GEN.png`} />
-              <div>Gen.G</div>
-            </div>
-          </li>
-          <li>
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000230');
-              // }}
-            >
-              {/* <div id="100000230" className="option"> */}
-              <img src={`img/team_logo/DRX.png`} />
-              <div>DRX</div>
-            </div>
-          </li>{' '}
-          <li>
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000435');
-              // }}
-            >
-              {/* <div id="100000435" className="option"> */}
-              <img src={`img/team_logo/BRO.png`} />
-              <div>Fredit BRION</div>
-            </div>
-          </li>
-          <li>
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000230');
-              // }}
-            >
-              {/* <div id="100000230" className="option"> */}
-              <img src={`img/team_logo/KT.png`} />
-              <div>kt Rolster</div>
-            </div>
-          </li>
-          <li>
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000436');
-              // }}
-            >
-              {/* <div id="100000436" className="option"> */}
-              <img src={`img/team_logo/NS.png`} />
-              <div>NongShim REDFORCE</div>
-            </div>
-          </li>
-          <li>
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000155');
-              // }}
-            >
-              {/* <div id="100000155" className="option"> */}
-              <img src={`img/team_logo/LSB.png`} />
-              <div>Liiv SANDBOX</div>
-            </div>
-          </li>
-          <li>
-            <div
-              className="option"
-              // onClick={() => {
-              //   handleClick('100000066');
-              // }}
-            >
-              {/* <div id="100000066" className="option"> */}
-              <img src={`img/team_logo/HLE.png`} />
-              <div>Hanwha Life Esports</div>
-            </div>
-          </li>
+          <li className="optionItem">
+            <img src={`img/team_logo/GEN.png`} />
+            Gen.G
+          </li> */}
         </ul>
       </div>
-
       {/* 선수 정보 */}
       <div>
-        <RosterT1Container id="t1" className="rosters" teamId={teamId} />
+        {/* <RosterT1Container id="t1" className="rosters" teamId={teamId} /> */}
       </div>
     </div>
   );

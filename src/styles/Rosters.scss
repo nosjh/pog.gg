@@ -1,92 +1,181 @@
-@import './utils.scss';
+@import "./utils.scss";
 
 .rosters-container {
   padding-top: 24px;
 }
 
-.select_wrap {
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+// .select_wrap {
+//   left: 50%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin: 0 auto;
+
+//   user-select: none;
+//   line-height: 52px;
+// }
+
+// .select_wrap .default_option {
+//   background: #fff;
+//   border-radius: 4px;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   cursor: pointer;
+// }
+
+// .select_wrap .select_ul {
+//   z-index: 1;
+//   margin-top: 57px;
+//   width: 360px;
+//   background: #fff;
+//   border-radius: 4px;
+//   border: 1px solid $gray-02;
+//   display: none;
+// }
+
+// .select_wrap .select_ul li {
+//   width: 360px;
+//   height: 72px;
+//   border-bottom: 1px solid $gray-02;
+//   cursor: pointer;
+// }
+
+// .select_wrap .select_ul li:last-child {
+//   border-bottom: none;
+// }
+
+// .select_wrap .select_ul li:first-child:hover {
+//   border-top-left-radius: 4px;
+//   border-top-right-radius: 4px;
+// }
+
+// .select_wrap .select_ul li:last-child:hover {
+//   border-bottom-left-radius: 4px;
+//   border-bottom-right-radius: 4px;
+// }
+
+// .select_wrap .select_ul li:hover {
+//   background: $gray-02;
+// }
+
+// .select_wrap .option {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// .select_wrap .option img {
+//   padding-top: 12px;
+//   width: 32px;
+// }
+
+// .select_wrap.active .select_ul {
+//   display: block;
+// }
+
+// .option {
+//   height: 20px;
+// }
+
+// .option > div {
+//   position: absolute;
+//   padding-top: 30px;
+//   height: 14px;
+// }
+
+// ---
+
+.selectBox {
+  position: relative;
+  cursor: pointer;
   background-color: white;
-  margin: 0 auto;
   width: 360px;
   height: 72px;
-  line-height: 52px;
   border: 1px solid $gray-02;
   border-radius: 4px;
-  user-select: none;
   color: $black;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.select_wrap .default_option {
-  background: #fff;
-  border-radius: 4px;
+.selectBox .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0 none;
+  outline: 0 none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.selectBox .optionList {
+  position: absolute;
+  top: 76px;
+  left: 0;
   width: 100%;
-  height: 100%;
+  background: white;
+  color: $black;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  display: none;
+  // max-height: 0;
+}
+
+.selectBox .optionListShow {
+  position: absolute;
+  top: 76px;
+  left: 0;
+  width: 100%;
+  background: white;
+  color: $black;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  // max-height: 0;
+}
+
+.selectBox.active .optionList {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  cursor: pointer;
+  max-height: 2000px;
 }
 
-.select_wrap .select_ul {
-  z-index: 1;
-  margin-top: 57px;
-  width: 360px;
-  background: #fff;
-  border-radius: 4px;
-  border: 1px solid $gray-02;
-  display: none;
-}
-
-.select_wrap .select_ul li {
-  width: 360px;
-  height: 72px;
-  border-bottom: 1px solid $gray-02;
-  cursor: pointer;
-}
-
-.select_wrap .select_ul li:last-child {
-  border-bottom: none;
-}
-
-.select_wrap .select_ul li:first-child:hover {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-
-.select_wrap .select_ul li:last-child:hover {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.select_wrap .select_ul li:hover {
+.selectBox .optionItem:hover {
   background: $gray-02;
 }
 
-.select_wrap .option {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.selectBox .optionItem:last-child {
+  border-bottom: 0 none;
 }
 
-.select_wrap .option img {
-  padding-top: 12px;
+.optionItem {
+  // display: flex;
+  // flex-direction: column;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.optionItem > img {
+  margin: 0 auto;
   width: 32px;
 }
 
-.select_wrap.active .select_ul {
-  display: block;
+.label > img {
+  margin: 0 auto;
+  width: 32px;
 }
 
-.option {
-  height: 20px;
-}
-
-.option > div {
-  position: absolute;
-  padding-top: 30px;
-  height: 14px;
+.label.active {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }

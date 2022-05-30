@@ -21,15 +21,58 @@
   height: 58px;
 }
 
-.info-player-detail > .position > img {
-  width: 32px;
-  height: 32px;
+.position {
+  margin-left: 20px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.position > img {
+  margin-top: 17px;
+  width: 24px;
+  height: 24px;
 }
 
 .club {
+  margin-left: 12px;
   display: flex;
+  width: 56px;
+}
+
+.club > div:last-child {
+  margin-left: 10px;
+}
+
+.player {
+  width: 80px;
+  margin-left: 30px;
+}
+
+.player-name {
+  width: 120px;
+  margin-left: 10px;
 }
 
 .player-name > div {
-  height: 16px;
+  height: 14px;
+}
+
+.player-name > div:first-child {
+  margin-top: -6px;
+}
+
+.player-name > div:last-child {
+  color: #52514F;
+  font-size: 11px;
+}
+
+.nation {
+  margin-left: 60px;
+  width: 140px;
+}
+
+.birth {
+  width: 80px;
+  text-align: center;
 }

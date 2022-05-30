@@ -1,6 +1,7 @@
-import { Routes, Route } from 'react-router-dom';
-import Main from './pages/Main';
-import RosterT1Container from './containers/RosterT1Container';
+import { Routes, Route } from "react-router-dom";
+import Main from "./pages/Main";
+import RosterT1Container from "./containers/RosterT1Container";
+import "antd/dist/antd.css";
 
 function App() {
   return (

@@ -3,8 +3,8 @@ import * as api from '../lib/api';
 import RosterT1 from './../components/rosters/RosterT1';
 import '../styles/RosterContainer.scss';
 
-function RosterT1Container({ teamId }) {
-  console.log(teamId);
+function RosterT1Container({ TeamId }) {
+  console.log(TeamId);
   const [rostersT1, setRostersT1] = useState([]);
   useEffect(() => {
     api.RostersT1().then(function (response) {

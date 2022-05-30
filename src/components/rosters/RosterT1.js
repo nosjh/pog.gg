@@ -4,6 +4,12 @@ import '../../styles/Player.scss';
 function RosterT1({ roster }) {
   const { PlayerId, CommonName, MatchName, Position, BirthDate, Nationality } = roster;
 
+  // const NewBirthDate = BirthDate.filter((element) => element != null);
+  const BirthDay = new Date(BirthDate);
+  const year = BirthDay.getFullYear();
+  const month = ('0' + (BirthDay.getMonth() + 1)).slice(-2);
+  const day = ('0' + BirthDay.getDate()).slice(-2);
+  const BirthString = year + '-' + month  + '-' + day;
   //   console.log(roster);
   return (
     <div>
@@ -22,8 +28,8 @@ function RosterT1({ roster }) {
         <div className="position">
           <img src={`img/position/${Position}.svg`} />
         </div>
-        <div>{Nationality}</div>
-        <div>{BirthDate}</div>
+        <div className='nation'>{Nationality}</div>
+        <div className='birth'>{BirthString}</div>
       </div>
     </div>
   );

@@ -14,22 +14,6 @@ function ScheduleList({ schedule }) {
     return dateString;
   };
 
-  //   const ScoreA = TeamAScore.map((n) => {
-  //     if (n === 3) {
-  //       return n - 1;
-  //     } else {
-  //       return n;
-  //     }
-  //   });
-
-  //   const ScoreB = TeamBScore.map((n) => {
-  //     if (n === 3) {
-  //       return n - 1;
-  //     } else {
-  //       return n;
-  //     }
-  //   });
-
   return (
     <div className="info-schedule">
       <div className="date Pretendard-Regular font-14">
