@@ -99,6 +99,9 @@
   color: $black;
   text-align: center;
   margin: 0 auto;
+  @include mobile {
+    width: 320px;
+  }
 }
 
 .selectBox .label {
@@ -137,7 +140,7 @@
   margin: 0;
   right: -1px;
   top: 76px;
-  width: 360px;
+  width: 100%;
   background: white;
   color: $black;
   list-style-type: none;

@@ -16,18 +16,20 @@
 .info-player div:nth-child(1) {
   padding-left: 52px;
   float: left;
+  @include mobile {
+    padding-left: 20px;
+  }
 }
-
-// .info-player div:nth-child(2) {
-//   padding-left: 76px;
-//   float: left;
-// }
 
 .info-player div:nth-child(2) {
   float: left;
   width: 70px;
   text-align: center;
   padding-left: 148px;
+  @include mobile {
+    width: 60px;
+    padding-left: 116px;
+  }
 }
 
 .info-player div:nth-child(3) {
@@ -35,6 +37,9 @@
   width: 70px;
   padding-left: 50px;
   text-align: center;
+  @include mobile {
+    padding-left: 0px;
+  }
 }
 
 .info-player div:nth-child(4) {
@@ -42,4 +47,7 @@
   width: 70px;
   padding-left: 66px;
   text-align: center;
+  @include mobile {
+    display: none;
+  }
 }

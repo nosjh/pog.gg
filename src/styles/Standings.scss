@@ -16,6 +16,9 @@
 .info-name div:nth-child(1) {
   padding-left: 12px;
   float: left;
+  @include mobile {
+    padding-left: 4px;
+  }
 }
 
 .info-name div:nth-child(2) {
@@ -27,16 +30,25 @@
   float: right;
   width: 70px;
   text-align: center;
+  @include mobile {
+    width: 40px;
+  }
 }
 
 .info-name div:nth-child(4) {
   float: right;
   width: 70px;
   text-align: center;
+  @include mobile {
+    width: 56px;
+  }
 }
 
 .info-name div:nth-child(5) {
   float: right;
   width: 70px;
   text-align: center;
+  @include mobile {
+    width: 24px;
+  }
 }
