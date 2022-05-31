@@ -15,7 +15,6 @@ function Schedules() {
     <div className="schedul-container">
       <div>
         {schedules.map((schedule, idx) => {
-          let scheduleNew;
           if (idx % 2 !== 0) {
             schedule.Day = "";
           }

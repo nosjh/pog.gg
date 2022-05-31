@@ -7,6 +7,7 @@ function Footer() {
       <img
         className="footer-logo"
         src={process.env.PUBLIC_URL + "/img/logo_pog.svg"}
+        alt="logo"
       />
       <p className="Poppins-Light font-11-10">
         POG.GG isn’t endorsed by Riot Games and doesn’t reflect the views or

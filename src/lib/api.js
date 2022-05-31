@@ -1,8 +1,10 @@
-import axiosInstance from './axiosInstance';
+import axiosInstance from "./axiosInstance";
 
 export const Standings = async () => {
   try {
-    const response = await axiosInstance.get('/v3/lol/scores/json/Standings/100001485');
+    const response = await axiosInstance.get(
+      "/v3/lol/scores/json/Standings/100001485"
+    );
     // console.log(response);
     return response.data;
   } catch (e) {}
@@ -10,14 +12,18 @@ export const Standings = async () => {
 
 export const Schedules = async () => {
   try {
-    const response = await axiosInstance.get('/v3/lol/scores/json/Schedule/100001485');
+    const response = await axiosInstance.get(
+      "/v3/lol/scores/json/Schedule/100001485"
+    );
     return response.data;
   } catch (e) {}
 };
 
-export const RostersT1 = async () => {
+export const RostersT1 = async (teamId) => {
   try {
-    const response = await axiosInstance.get('/v3/lol/scores/json/PlayersByTeam/100000231');
+    const response = await axiosInstance.get(
+      `/v3/lol/scores/json/PlayersByTeam/${teamId}`
+    );
     return response.data;
   } catch (e) {}
 };

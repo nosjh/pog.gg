@@ -103,6 +103,7 @@
 
 .selectBox .label {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: inherit;
@@ -111,6 +112,9 @@
   outline: 0 none;
   background: transparent;
   cursor: pointer;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 .selectBox .optionList {
@@ -125,22 +129,22 @@
   border-radius: 4px;
   overflow: hidden;
   display: none;
-  // max-height: 0;
 }
 
 .selectBox .optionListShow {
   position: absolute;
+  padding: 0;
+  margin: 0;
+  right: -1px;
   top: 76px;
-  left: 0;
-  width: 100%;
+  width: 360px;
   background: white;
   color: $black;
   list-style-type: none;
-  padding: 0;
   border-radius: 4px;
   overflow: hidden;
   display: block;
-  // max-height: 0;
+  border: 1px solid $gray-02;
 }
 
 .selectBox.active .optionList {
@@ -158,10 +162,11 @@
 }
 
 .optionItem {
-  // display: flex;
-  // flex-direction: column;
-  padding-top: 6px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
   padding-bottom: 6px;
+  border-bottom: 1px solid $gray-02;
 }
 
 .optionItem > img {

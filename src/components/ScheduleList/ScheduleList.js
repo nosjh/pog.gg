@@ -23,7 +23,7 @@ function ScheduleList({ schedule }) {
         <div className="teamA">
           <div className="NameA">{TeamAKey}</div>
           <div className="logoA">
-            <img src={`img/team_logo/${TeamAKey}.png`} />
+            <img src={`img/team_logo/${TeamAKey}.png`} alt="team logo" />
           </div>
         </div>
         <div className="score">
@@ -33,7 +33,7 @@ function ScheduleList({ schedule }) {
         </div>
         <div className="teamB">
           <div className="logoB">
-            <img src={`img/team_logo/${TeamBKey}.png`} />
+            <img src={`img/team_logo/${TeamBKey}.png`} alt="team logo" />
           </div>
           <div className="NameB">{TeamBKey}</div>
         </div>

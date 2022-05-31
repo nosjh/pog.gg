@@ -1,4 +1,4 @@
-@import './utils.scss';
+@import "./utils.scss";
 
 .roster-container {
   margin-top: 24px;
@@ -14,30 +14,30 @@
 }
 
 .info-player div:nth-child(1) {
-  padding-left: 12px;
+  padding-left: 52px;
   float: left;
 }
+
+// .info-player div:nth-child(2) {
+//   padding-left: 76px;
+//   float: left;
+// }
 
 .info-player div:nth-child(2) {
-  padding-left: 76px;
-  float: left;
-}
-
-.info-player div:nth-child(3) {
   float: left;
   width: 70px;
   text-align: center;
   padding-left: 148px;
 }
 
-.info-player div:nth-child(4) {
+.info-player div:nth-child(3) {
   float: left;
   width: 70px;
   padding-left: 50px;
   text-align: center;
 }
 
-.info-player div:nth-child(5) {
+.info-player div:nth-child(4) {
   float: left;
   width: 70px;
   padding-left: 66px;

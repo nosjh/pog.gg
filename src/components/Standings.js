@@ -22,7 +22,7 @@ function Standings() {
       </div>
       <div>
         {standings.map((standing) => (
-          <StandingList key={standing.teamId} standing={standing} />
+          <StandingList key={standing.TeamId} standing={standing} />
         ))}
       </div>
     </div>
