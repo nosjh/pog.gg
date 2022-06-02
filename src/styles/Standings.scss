@@ -32,6 +32,8 @@
   text-align: center;
   @include mobile {
     width: 40px;
+    margin-right: 8px;
+    margin-left: 8px;
   }
 }
 
@@ -40,7 +42,8 @@
   width: 70px;
   text-align: center;
   @include mobile {
-    width: 56px;
+    width: 54px;
+    margin-left: 6px;
   }
 }
 
@@ -49,6 +52,6 @@
   width: 70px;
   text-align: center;
   @include mobile {
-    width: 24px;
+    width: 60px;
   }
 }
